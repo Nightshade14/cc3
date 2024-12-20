@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Photo Album</title>
+    <link rel="stylesheet" href="./style.css" />
+
+    <script type="text/javascript" src="apiGateway-js-sdk/lib/axios/dist/axios.standalone.js"></script>
+    <script type="text/javascript" src="apiGateway-js-sdk/lib/CryptoJS/rollups/crypto-js.js"></script>
+    <script type="text/javascript" src="apiGateway-js-sdk/lib/CryptoJS/rollups/sha256.js"></script>
+    <script type="text/javascript" src="apiGateway-js-sdk/lib/CryptoJS/components/hmac.js"></script>
+    <script type="text/javascript" src="apiGateway-js-sdk/lib/CryptoJS/components/enc-base64.js"></script>
+    <script type="text/javascript" src="apiGateway-js-sdk/lib/url-template/url-template.js"></script>
+    <script type="text/javascript" src="apiGateway-js-sdk/lib/apiGatewayCore/sigV4Client.js"></script>
+    <script type="text/javascript" src="apiGateway-js-sdk/lib/apiGatewayCore/apiGatewayClient.js"></script>
+    <script type="text/javascript" src="apiGateway-js-sdk/lib/apiGatewayCore/simpleHttpClient.js"></script>
+    <script type="text/javascript" src="apiGateway-js-sdk/lib/apiGatewayCore/utils.js"></script>
+    <script type="text/javascript" src="apiGateway-js-sdk/apigClient.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+
+  </head>
+  <body>
+    <!-- Search Section -->
+    <div class="search-section">
+      <h2>Search from uploaded Photos</h2>
+      <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search photos..." />
+        <button>Search</button>
+      </div>
+      <div id="searchResults" class="results-grid"></div>
+    </div>
+
+    <!-- Upload Section -->
+    <div class="upload-section">
+      <h2>Upload Photo</h2>
+      <div class="upload-container">
+        <input type="file" id="photoInput" accept="image/*" />
+        <input
+          type="text"
+          id="customLabels"
+          placeholder="Custom labels (comma-separated)"
+        />
+        <button>Upload</button>
+      </div>
+      <div id="uploadStatus"></div>
+    </div>
+  </body>
+</html>
